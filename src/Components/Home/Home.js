@@ -14,7 +14,7 @@ class Home extends React.Component {
 
     return (
         <Grid container className={classes.cont} direction={"column"} alignItems={"center"} justify={"space-around"}>
-          <Grid item> 
+          <Grid item>
             <img className={classes.logo} src={Logo} alt="Statsify"/>
           </Grid>
           <Grid item>

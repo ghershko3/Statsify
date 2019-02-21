@@ -10,18 +10,24 @@ class MyTeam extends Component {
   render() {
     const players = [
       {
+        id: 1,
+        teamId: 1,
         fName : "Aga",
         lName: "Doo",
         position: PositionsEnum.GUARD,
         number: 6
       },
       {
+        id: 2,
+        teamId: 1,
         fName : "Young",
         lName: "Haim",
         position: PositionsEnum.CENTER,
         number: 7
       },
       {
+        id: 3,
+        teamId: 1,
         fName : "Itzik",
         lName: "Kala",
         position: PositionsEnum.FORWARD,
@@ -29,12 +35,20 @@ class MyTeam extends Component {
       },
     ]
 
+    const teams = [
+      {
+        id: 1,
+        name: 'Otzma Modiin',
+        year: 2019
+      }
+    ]
+
     const { classes } = this.props
 
     return (
       <Grid container className={classes.cont} direction={"column"} alignItems={"stretch"}>
         <Grid item>
-          <TeamData />
+          <TeamData team={teams.find(team => team.id === 1)} />
         </Grid>
         <Grid item>
           <PlayersList players={players} />

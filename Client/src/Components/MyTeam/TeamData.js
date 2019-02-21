@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 
 class TeamData extends React.Component  {
   render() {
-    const { classes } = this.props;
+    const { classes, team } = this.props;
 
     return (
       <div>
@@ -15,12 +15,12 @@ class TeamData extends React.Component  {
           <Grid container direction={"column"} alignItems={"center"} justify={"space-around"}>
             <Grid item>
               <Typography variant="h5" component="h3">
-                This is a sheet of paper.
+                {team.name}
               </Typography>
             </Grid>
             <Grid item>
               <Typography component="p">
-                Paper can be used to build surface or other elements for your application.
+                {team.year}
               </Typography>
             </Grid>
           </Grid>
